@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Quiz</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+
+  <button type='button' onclick='location.reload()'>Recarga</button>
+  <div class="container">
+    <div id="quiz" *ngIf="showingResults()">
+
+      <hr style="margin-bottom: 20px">
+
+      <p id="question" {{preguntaActual}}> Pegunta:</p>
+    </div>
+
+    <div class="button-grp2" *ngIf="showingResults()">
+      <div class="button-grp" *ngFor="let choice of choicesActuales; let i = index">
+        <ion-button id="btn0" (click)="guess(i,choice)" fill="clear"><span id="choice0" {{choice}}>Elige</span></ion-button>
+      </div>
+    </div>
+    <hr style="margin-top: 20px">
+
+    <footer>
+      <p id="progress"{{progreso}}></p>
+
+      <h1 {{gameOver}} >Perdiste </h1>
+    </footer>
+  </div>
+</ion-content>

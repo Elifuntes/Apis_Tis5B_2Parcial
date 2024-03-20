@@ -1,0 +1,80 @@
+body {
+	background: #eeeeee;
+	font-family: cursive;
+}
+
+.container {
+	width: 600px;
+	height: 550px;
+	margin: 10px auto;
+	background-color: #fff;
+	padding: 10px 50px 50px 10px;
+	border-radius: 50px;
+	border: 2px solid #cbcbcb;
+	box-shadow: 10px 15px 5px #cbcbcb;
+}
+#quiz{
+	margin-left: 50px;
+}
+.container h1 {
+	background: #405CA1;
+	color: #fff;
+	font-size: 60px;
+	text-align: center;
+	padding: 2px 0 1px 0;
+	border-radius: 50px;
+}
+
+#question {
+	font-size: 30px;
+	color: #5a6772;
+}
+
+.button-grp {
+	margin-top: 30px;
+}
+.button-grp2 {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+}
+
+#btn0, #btn1, #btn2, #btn3 {
+	background: #405CA1;
+	width: 250px;
+	font-size: 20px;
+	border: 1px solid #1d3c6a;
+	border-radius: 50px;
+	margin: 0px 0px 10px 7.6px;
+	padding: 10px 10px;
+	color: #fff;
+}
+
+#btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
+	cursor: pointer;
+	background: #2D85A4; /*come here*/
+}
+
+#btn0:focus, #btn1:focus, #btn2:focus, #btn3:focus {
+	outline: 0;
+}
+
+#progress {
+	color: #2b2b2b;
+	font-size: 18px;
+}
+
+@media screen and (max-width:450px){
+	.container {
+		width: 100%;
+		height: 100%;
+		
+		
+	}
+	#btn0{
+		width: 100%;
+	}
+	.button-grp2 {
+		display: grid;
+		grid-template-columns: repeat(1,0fr);
+	}
+}
